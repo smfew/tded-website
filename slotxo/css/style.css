@@ -84,10 +84,10 @@ body {
 @media (max-width: 767px) {
 	body {
 		background: 0 0;
-		background-color: #5e0000;
+		background-color: #d9b05e;
 	}
 }
-@media (min-width: 769px) {
+@media (min-width: 991px) {
 	.hide_register {
 		display: none;
 		background: #d9b05e;
@@ -2390,7 +2390,7 @@ marquee {
 	max-width: 200px;
 }
 hr {
-	border: 1px solid #FBB03B
+	border: 1px solid #FBB03B;
 	box-sizing: content-box;
 	width: 95%;
 }
@@ -2877,14 +2877,6 @@ li:last-child {
 .pb_navbar ul > li > a:hover {
 	color: #fec74a !important;
 }
-.bglinkon {
-	background-color: #000000d4;
-}
-.bglinkon p {
-	margin: 0 0 7px;
-	padding: 0;
-	font-size: 0.8rem;
-}
 .bc-hover {
 	background: radial-gradient(
 		ellipse at top center,
@@ -2922,11 +2914,6 @@ li:last-child {
 		width: 50%;
 		margin-top: 9px;
 	}
-	.bglinkon {
-		position: fixed;
-		top: 0;
-		z-index: 999998;
-	}
 	.pb_navbar.scrolled.pb_scrolled-light {
 		top: 112px;
 	}
@@ -2946,11 +2933,6 @@ li:last-child {
 	}
 }
 @media (max-width: 375px) {
-	.bglinkon {
-		position: fixed;
-		top: 0;
-		z-index: 999998;
-	}
 	.pb_navbar.scrolled.pb_scrolled-light {
 		top: 112px;
 	}
