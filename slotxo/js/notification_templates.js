@@ -30,7 +30,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: false,
                 displayCloseButton: false,
-                onclick: function(event){ location.href = 'https://lin.ee/lrYsHQD'; },
+                onclick: function(event){ location.href = 'https://lin.ee/tCb5RUy'; },
                 positionClass: 'nfc-top-right'
             })({
                 title: 'หากลูกค้าฝากแบบปกติผ่านไทยพาณิชย์ หรือ ฝากผ่านทรูวอลเล็ต',
@@ -57,8 +57,17 @@ function notify(scenario){
                 displayCloseButton: true,
                 positionClass: 'nfc-top-right'
             })({
-                title: 'ขณะนี้ ระบบธนาคารไทยพาณิชย์ (SCB) ขัดข้อง อาจส่งผลให้การฝากบางรายการล่าช้ากว่าปกติ (เฉพาะลูกค้าที่ฝากด้วยบัญชี SCB)',
-                message: 'หากเกิน 10 นาที เครดิตยังไม่เข้า สามารถส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ'
+                title: 'ขณะนี้ ระบบธนาคารไทยพาณิชย์ (SCB) ขัดข้อง อาจส่งผลให้การฝากบางรายการล่าช้ากว่าปกติ (กระทบเฉพาะลูกค้าที่ฝากด้วยบัญชี SCB)',
+                message: 'หากเกิน 10 นาที เครดิตยังไม่เข้า สามารถส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ  (สิ้นเดือน เงินเดือนออก เจ้ามือหวยเคลียร์ยอดจ้า)'
+            });
+            window.createNotification({
+                theme: 'info',
+                showDuration: 0,
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-top-right'
+            })({
+                message: 'ฝากครั้งต่อไป แอดมินแนะนำให้เปลี่ยนไปใช้บัญชีธนาคารอื่นดีกว่านะคะ (เครดิตเข้าออโต้ภายใน 1 นาที ไม่ต้องส่งสลิป)'
             });
             return;
     }
