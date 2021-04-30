@@ -21,7 +21,7 @@ function notify(scenario){
                 positionClass: 'nfc-top-right'
             })({
                 title: 'คำแนะนำในการเลือกธนาคารฝาก',
-                message: ' '
+                message: ''
             });
             window.createNotification({
                 theme: 'success',
@@ -31,7 +31,7 @@ function notify(scenario){
                 positionClass: 'nfc-top-right'
             })({
                 title: 'ฝากแบบปกติ (จากทุกธนาคาร ยกเว้นไทยพาณิชย์)',
-                message: 'เครดิตเข้าออโต้  ภายใน 1 นาที  ไม่ต้องส่งสลิปค่าา'
+                message: 'เครดิตเข้าออโต้  \\nภายใน 1 นาที  \\nไม่ต้องส่งสลิปค่าา'
             });
             window.createNotification({
                 theme: 'warning',
