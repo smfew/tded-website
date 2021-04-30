@@ -20,8 +20,8 @@ function notify(scenario){
                 displayCloseButton: true,
                 positionClass: 'nfc-top-right'
             })({
-                title: 'ไม่แนะนำให้ใช้บัญชีไทยพาณิชน์ (SCB) ในการสมัคร เนื่องจากระบบฝากออโต้ไม่รองรับ',
-                message: 'หากมีความจำเป็นต้องใช้ SCB  ทุกครั้งที่ฝาก จะต้องส่งสลิปการโอนให้แอดมินในแชททุกครั้งนะคะ'
+                title: 'ไม่แนะนำให้ลูกค้าใช้บัญชี SCB นะคะ เนื่องจากระบบฝากออโต้ไม่รองรับ',
+                message: 'หากมีความจำเป็นต้องใช้ SCB  โอนเรียบร้อยแล้วส่งสลิปให้แอดมินได้เลย เดี๋ยวแอดรีบเติมให้ค่า'
             });
             return;
         case scenarios.wallet_slip_warning:
@@ -33,21 +33,57 @@ function notify(scenario){
                 onclick: function(event){ location.href = 'https://lin.ee/tCb5RUy'; },
                 positionClass: 'nfc-top-right'
             })({
-                title: 'หากลูกค้าฝากแบบปกติผ่านไทยพาณิชย์ หรือ ฝากผ่านทรูวอลเล็ต',
-                message: 'คลิกที่นี่ เพื่อส่งสลิปให้แอดมินได้เลยค่ะ'
+                title: 'ลูกค้าที่โอนผ่าน SCB หรือ ทรูวอลเล็ต เครดิตจะไม่เข้าออโต้นะคะ',
+                message: 'คลิกที่นี่ เพื่อติดต่อแอดมินพร้อมส่งสลิปได้เลยค่ะ'
             });
             return;
         case scenarios.autoplay_maintenance:
-
+            window.createNotification({
+                theme: 'error',
+                showDuration: 0,
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-top-right'
+            })({
+                title: 'ระบบฝาก-ถอนอัตโนมัติปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx',
+                message: 'ในช่วงเวลาดังกล่าว ลูกค้าจะไม่สามารถทำรายการฝาก-ถอนผ่านระบบได้'
+            });
             return;
         case scenarios.kbank_maintenance:
-
+            window.createNotification({
+                theme: 'error',
+                showDuration: 0,
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-top-right'
+            })({
+                title: 'ธนาคารกสิกรปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx',
+                message: 'ลูกค้าจะไม่สามารถฝากผ่านบัญชี KBANK ได้'
+            });
             return;
         case scenarios.scb_maintenance:
-
+            window.createNotification({
+                theme: 'error',
+                showDuration: 0,
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-top-right'
+            })({
+                title: 'ธนาคารไทยพาณิชย์ปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx  ',
+                message: 'ลูกค้าจะไม่สามารถฝากผ่านบัญชี SCB ได้ และเนื่องจากแอดมินต้องไล่ถอนมือให้ลูกค้าทีละท่าน อาจเกิดความล่าช้า ต้องขออภัยด้วยค่ะ'
+            });
             return;
         case scenarios.kbank_unstable:
-
+            window.createNotification({
+                theme: 'warning',
+                showDuration: 0,
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-top-right'
+            })({
+                title: 'ขณะนี้ระบบธนาคารกสิกรไม่เสถียร อาจเกิดความล่าช้าในการฝาก',
+                message: 'หากเกิน 10 นาทีแล้ว เครดิตยังไม่เข้า ส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ'
+            });
             return;
         case scenarios.scb_unstable:
             window.createNotification({
@@ -57,17 +93,8 @@ function notify(scenario){
                 displayCloseButton: true,
                 positionClass: 'nfc-top-right'
             })({
-                title: 'ขณะนี้ ระบบธนาคารไทยพาณิชย์ (SCB) ขัดข้อง อาจส่งผลให้การฝากบางรายการล่าช้ากว่าปกติ (กระทบเฉพาะลูกค้าที่ฝากด้วยบัญชี SCB)',
-                message: 'หากเกิน 10 นาที เครดิตยังไม่เข้า สามารถส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ  (สิ้นเดือน เงินเดือนออก เจ้ามือหวยเคลียร์ยอดจ้า)'
-            });
-            window.createNotification({
-                theme: 'info',
-                showDuration: 0,
-                closeOnClick: true,
-                displayCloseButton: true,
-                positionClass: 'nfc-top-right'
-            })({
-                message: 'ฝากครั้งต่อไป แอดมินแนะนำให้เปลี่ยนไปใช้บัญชีธนาคารอื่นดีกว่านะคะ (เครดิตเข้าออโต้ภายใน 1 นาที ไม่ต้องส่งสลิป)'
+                title: 'ขณะนี้ระบบธนาคารไทยพาณิชย์ไม่เสถียร อาจเกิดความล่าช้าในการฝาก',
+                message: 'หากเกิน 10 นาทีแล้ว เครดิตยังไม่เข้า ส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ  (ทนช่วงสิ้นเดือนหน่อยนะคร้า เงินเดือนออก เจ้ามือหวยเคลียร์ยอดจ้า 555)'
             });
             return;
     }
