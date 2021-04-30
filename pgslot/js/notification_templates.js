@@ -58,6 +58,7 @@ function notify(scenario){
                 title: '',
                 message: 'ฝากผ่านทรูวอลเล็ต:  เครดิตไม่เข้าออโต้  แจ้งสลิปที่แอดมินทุกยอดฝาก'
             });
+            return;
         case scenarios.wallet_slip_warning:
             window.createNotification({
                 theme: 'information',
@@ -68,14 +69,19 @@ function notify(scenario){
                 title: 'หากลูกค้าโอนผ่านทรูวอลเล็ต หรือ โอนด้วยธ.ไทยพาณิชย์แต่ไม่เลือกแบบทศนิยม',
                 message: 'คลิกที่นี่ เพื่อแจ้งสลิปที่แอดมินได้เลยจ้า'
             });
+            return;
         case scenarios.autoplay_maintenance:
 
+            return;
         case scenarios.kbank_maintenance:
 
+            return;
         case scenarios.scb_maintenance:
 
+            return;
         case scenarios.kbank_unstable:
 
+            return;
         case scenarios.scb_unstable:
             window.createNotification({
                 theme: 'warning',
@@ -94,9 +100,7 @@ function notify(scenario){
             })({
                 message: 'ฝากครั้งต่อไป แอดแนะนำให้เลือกฝากแบบทศนิยมนะคะ (เครดิตเข้าออโต้ภายใน 1 นาที ไม่ต้องส่งสลิป)'
             });
+            return;
     }
 
 }
-
-var scenario = scenarios.register_bank_recommendation;
-notify(scenario);
