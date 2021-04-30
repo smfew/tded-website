@@ -18,9 +18,9 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
-                title: 'ไม่แนะนำให้ลูกค้าใช้บัญชี SCB นะคะ เนื่องจากระบบฝากออโต้ไม่รองรับ',
+                title: 'ไม่แนะนำให้ลูกค้าใช้บัญชี SCB ในการสมัครนะคะ เนื่องจากระบบฝากออโต้ไม่รองรับ',
                 message: 'หากมีความจำเป็นต้องใช้ SCB  โอนเรียบร้อยแล้วส่งสลิปให้แอดมินได้เลย เดี๋ยวแอดรีบเติมให้ค่า'
             });
             return;
@@ -28,10 +28,9 @@ function notify(scenario){
             window.createNotification({
                 theme: 'info',
                 showDuration: 0,
-                closeOnClick: false,
-                displayCloseButton: false,
-                onclick: function(event){ location.href = 'https://lin.ee/tCb5RUy'; },
-                positionClass: 'nfc-top-right'
+                closeOnClick: true,
+                displayCloseButton: true,
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ลูกค้าที่โอนผ่าน SCB หรือ ทรูวอลเล็ต เครดิตจะไม่เข้าออโต้นะคะ',
                 message: 'คลิกที่นี่ เพื่อติดต่อแอดมินพร้อมส่งสลิปได้เลยค่ะ'
@@ -43,7 +42,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ระบบฝาก-ถอนอัตโนมัติปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx',
                 message: 'ในช่วงเวลาดังกล่าว ลูกค้าจะไม่สามารถทำรายการฝาก-ถอนผ่านระบบได้'
@@ -55,7 +54,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ธนาคารกสิกรปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx',
                 message: 'ลูกค้าจะไม่สามารถฝากผ่านบัญชี KBANK ได้'
@@ -67,7 +66,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ธนาคารไทยพาณิชย์ปิดปรับปรุงระบบตั้งแต่เวลา xx.xx - xx.xx  ',
                 message: 'ลูกค้าจะไม่สามารถฝากผ่านบัญชี SCB ได้ และเนื่องจากแอดมินต้องไล่ถอนมือให้ลูกค้าทีละท่าน อาจเกิดความล่าช้า ต้องขออภัยด้วยค่ะ'
@@ -79,7 +78,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ขณะนี้ระบบธนาคารกสิกรไม่เสถียร อาจเกิดความล่าช้าในการฝาก',
                 message: 'หากเกิน 10 นาทีแล้ว เครดิตยังไม่เข้า ส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ'
@@ -91,7 +90,7 @@ function notify(scenario){
                 showDuration: 0,
                 closeOnClick: true,
                 displayCloseButton: true,
-                positionClass: 'nfc-top-right'
+                positionClass: 'nfc-bottom-left'
             })({
                 title: 'ขณะนี้ระบบธนาคารไทยพาณิชย์ไม่เสถียร อาจเกิดความล่าช้าในการฝาก',
                 message: 'หากเกิน 10 นาทีแล้ว เครดิตยังไม่เข้า ส่งสลิปให้แอดมินตรวจสอบได้เลยค่ะ  (ทนช่วงสิ้นเดือนหน่อยนะคร้า เงินเดือนออก เจ้ามือหวยเคลียร์ยอดจ้า 555)'
