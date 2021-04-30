@@ -1,9 +1,6 @@
-
-include('./notifications.js');
-
 const scenarios = {
-    register_bank_recommendation: "register_bnk_recommendation",
-    wallet_slip_warning: "slip_warning",
+    register_bank_recommendation: "register_bank_recommendation",
+    wallet_slip_warning: "wallet_slip_warning",
     autoplay_maintenance: "autoplay_maintenance",
 	kbank_maintenance: "kbank_maintenance",
 	scb_maintenance: "scb_maintenance",
@@ -100,3 +97,6 @@ function notify(scenario){
     }
 
 }
+
+var scenario = scenarios.register_bank_recommendation;
+notify(scenario);
