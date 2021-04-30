@@ -50,8 +50,7 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/logo.png" type="image/x-icon" />
-    <link href="notifications.css" rel="stylesheet" />
-    <script src="notifications.js"></script>
+    <link rel="stylesheet" href="css/notifications.css" type="text/css" />
 </head>
 <style>
     html,
@@ -97,7 +96,13 @@
             </li>
         </ul>
     </div>
-    <iframe class="h_iframe" src="https://autoplay.cloud/?prefix=UEdURA==" frameborder="0" width="100%"></iframe>
-</body>
+    <iframe class="h_iframe" src="https://autoplay.cloud/?prefix=UEdURA==" frameborder="0" width="100%" scrolling="no"></iframe>
 
+    <script src="js/notifications.js"></script>
+    <script src="js/notification_templates.js"></script>
+    <script type="text/javascript">
+            let scenario = scenarios.wallet_slip_warning;
+            notify(scenario);
+    </script>
+</body>
 </html>

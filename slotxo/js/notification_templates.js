@@ -30,7 +30,7 @@ function notify(scenario){
                 displayCloseButton: true,
                 positionClass: 'nfc-top-right'
             })({
-                title: 'ฝากทศนิยม (จากทุกธนาคาร) หรือ ฝากแบบปกติ (จากทุกธนาคาร ยกเว้นไทยพาณิชย์)',
+                title: 'ฝากแบบปกติ (จากทุกธนาคาร ยกเว้นไทยพาณิชย์)',
                 message: 'เครดิตเข้าออโต้  ภายใน 1 นาที  ไม่ต้องส่งสลิปค่าา'
             });
             window.createNotification({
