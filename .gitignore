@@ -30,4 +30,5 @@ yarn-error.log*
 .env.production.local
 
 /.vscode
-/.DS_Store
+.DS_Store
+*/.DS_Store
